@@ -302,6 +302,9 @@ class tx_odsosm_pi1 extends \TYPO3\CMS\Frontend\Plugin\AbstractPlugin {
 					$local_cObj->start($item,$table);
 					$markers[$table][$key]['popup']=$local_cObj->cObjGetSingle($this->config['popup.'][$table],$this->config['popup.'][$table.'.']);
 				}
+				if($this->config['tx_odsosm_marker.'][$table]){
+					$markers[$table][$key]['tx_odsosm_marker']=$this->config['tx_odsosm_marker.'][$table];
+				}
 			}
 		}
 
